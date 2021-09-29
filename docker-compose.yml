@@ -29,5 +29,16 @@ services:
     stdin_open: true
     tty: true
 
+  client:
+    build: ./client
+    depends_on:
+      - app
+    ports:
+      - 80:8080
+    volumes:
+      - ./client:/data
+    environment:
+      - API_URL=http://localhost:$NODE_LOCAL_PORT/ 
+
 volumes: 
   db:
