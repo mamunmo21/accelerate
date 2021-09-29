@@ -1,6 +1,12 @@
 # Docker Compose Nodejs and MySQL
 
 ## Run the System
+
+We can easily build the whole with only a single command:
+```bash
+docker-compose build
+
+
 We can easily run the whole with only a single command:
 ```bash
 docker-compose up
